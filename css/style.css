@@ -1,4 +1,5 @@
 @import url(variables.css);
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 * {
     padding: 0;
@@ -8,93 +9,267 @@
 }
 
 body {
-    background: rgb(241, 241, 241);
-    width: 100%;
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1vw;
+    background: rgb(244, 243, 243);
+}
+
+.container {
+    background: rgb(255, 255, 255);
+    width: 900px;
+    height: 900px;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(12, 1fr);
-    
+
     grid-template-areas:
-    ". . . . . FotoCafe FotoCafe FotoCafe FotoCafe FotoCafe"
-    ". titulo titulo titulo . FotoCafe FotoCafe FotoCafe FotoCafe FotoCafe"
-    ". titulo titulo titulo . FotoCafe FotoCafe FotoCafe FotoCafe FotoCafe"
-    ". titulo titulo titulo . FotoCafe FotoCafe FotoCafe FotoCafe FotoCafe"
-    ". descripcion descripcion descripcion . FotoCafe FotoCafe FotoCafe FotoCafe FotoCafe"
-    ". descripcion descripcion descripcion . FotoCafe FotoCafe FotoCafe FotoCafe FotoCafe"
-    ". boton . . . FotoCafe FotoCafe FotoCafe FotoCafe FotoCafe"
-    ". . lista lista lista lista lista lista . ."
-    ". . lista lista lista lista lista lista . ."
-    "cafe1 cafe1 cafe2 cafe2 cafe3 cafe3 cafe4 cafe4 cafe5 cafe5"
-    "cafe1 cafe1 cafe2 cafe2 cafe3 cafe3 cafe4 cafe4 cafe5 cafe5"
-    "cafe1 cafe1 cafe2 cafe2 cafe3 cafe3 cafe4 cafe4 cafe5 cafe5"    
+        ". . . . . FotoCafe FotoCafe FotoCafe FotoCafe FotoCafe"
+        ". titulo titulo titulo . FotoCafe FotoCafe FotoCafe FotoCafe FotoCafe"
+        ". titulo titulo titulo . FotoCafe FotoCafe FotoCafe FotoCafe FotoCafe"
+        ". titulo titulo titulo . FotoCafe FotoCafe FotoCafe FotoCafe FotoCafe"
+        ". descripcion descripcion descripcion . FotoCafe FotoCafe FotoCafe FotoCafe FotoCafe"
+        ". descripcion descripcion descripcion . FotoCafe FotoCafe FotoCafe FotoCafe FotoCafe"
+        ". boton boton . . FotoCafe FotoCafe FotoCafe FotoCafe FotoCafe"
+        ". . lista lista lista lista lista lista . ."
+        "cafe1 cafe1 cafe2 cafe2 cafe3 cafe3 cafe4 cafe4 cafe5 cafe5"
+        "cafe1 cafe1 cafe2 cafe2 cafe3 cafe3 cafe4 cafe4 cafe5 cafe5"
+        "cafe1 cafe1 cafe2 cafe2 cafe3 cafe3 cafe4 cafe4 cafe5 cafe5"
+        "cafe1 cafe1 cafe2 cafe2 cafe3 cafe3 cafe4 cafe4 cafe5 cafe5"
     ;
 }
 
-.item_1{
-    background: red;
+.item_1 {
+    /*background: red;*/
     grid-area: titulo;
-}
-.item_2{
-    background: rgb(255, 187, 0);
-    grid-area: descripcion;
-}
-.item_3{
-    background: rgb(72, 255, 0);
-    grid-area: boton;
-}
-.item_4{
-    background: rgb(0, 255, 149);
-    grid-area: lista;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+
 }
 
-.item_6{
-    background: rgb(0, 47, 255);
-    grid-area: FotoCafe;
+.item_1 h1 {
+    font-size: 2.5em;
+    line-height: 1.2em;
+    font-weight: normal;
+    color: var(--color-ternary);
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--text-color-primary);
+    object-fit: contain;
 }
-.item_7{
+
+.item_2 {
+    /*background: rgb(255, 187, 0);*/
+    grid-area: descripcion;
+    display: flex;
+    align-items: center;
+
+
+}
+
+.item_2 p {
+    color: var(--text-color-primary);
+    font-size: 1em;
+    line-height: 1.2;
+    font-weight: normal;
+    color: var(--color-ternary);
+    height: 100%;
+    width: 85%;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.item_3 {
+    /*background: rgb(72, 255, 0);*/
+    grid-area: boton;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item_3 a {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    background: var(--color-primary);
+    text-transform: capitalize;
+    border-radius: 30px
+}
+
+.item_4 {
+    /*background: rgb(0, 255, 149);*/
+    grid-area: lista;
+    position: relative;
+}
+
+.item_4 div {
+    margin-top: 2em;
+    position: absolute;
+    width: 110%;
+    height: 130%;
+    background: var(--color-tertiary);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.resumen_resentacion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 1em;
+    width: 40vw;
+    
+   
+}
+.resumen_resentacion li{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100px;
+    height: 30px;
+    color: var(--text-color-primary);
+    
+}
+.resumen_resentacion li p{
+   font-size: 0.6em;
+   font-family: Arial, Helvetica, sans-serif;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: var(--text-color-primary);
+    
+}
+
+.resumen_resentacion li h1{
+   font-size: 1.5em;
+   font-family: Arial, Helvetica, sans-serif;
+   color: var(--text-color-primary);
+    
+}
+.resumen_resentacion li img{
+    height: 30px;
+     
+     
+ }
+
+.item_6 {
+    /*background: rgb(0, 47, 255);*/
+    grid-area: FotoCafe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item_6 img {
+    height: 90%;
+    width: 90%;
+    object-fit: contain;
+}
+
+.item_7 {
     background: rgb(111, 0, 255);
     grid-area: cafe1;
 }
-.item_8{
+
+.item_8 {
     background: rgb(212, 0, 255);
     grid-area: cafe2;
 }
-.item_9{
+
+.item_9 {
     background: rgb(255, 0, 170);
     grid-area: cafe3;
 }
-.item_10{
+
+.item_10 {
     background: rgb(255, 0, 119);
     grid-area: cafe4;
 }
-.item_11{
+
+.item_11 {
     background: rgb(255, 0, 64);
     grid-area: cafe5;
 }
 
-@media (width <= 768px) {
-   
-    body {
+.item_7,
+.item_8,
+.item_9,
+.item_10,
+.item_11 {
+    background: var(--color-secundary);
+    padding-top: 5em;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+    padding-bottom: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.item_7 p,
+.item_8 p,
+.item_9 p,
+.item_10 p,
+.item_11 p {
+    color: white;
+    font-size: 0.7em;
+    margin: 0.5em 0;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    
+    
+}
+
+.foto_cafe {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+@media (width <=768px) {
+
+    .container {
         background: rgb(255, 226, 226);
         width: 100%;
         height: 100vh;
         display: grid;
-        
+        grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(10, 1fr);
-        
+
         grid-template-areas:
-        "titulo"
-        "FotoCafe"
-        "descripcion"
-        "boton"
-        "lista"
-        "cafe1"
-        "cafe2"
-        "cafe3"
-        "cafe4"
-        "cafe5"
-         
+            "titulo"
+            "FotoCafe"
+            "descripcion"
+            "boton"
+            "lista"
+            "cafe1"
+            "cafe2"
+            "cafe3"
+            "cafe4"
+            "cafe5"
+
         ;
     }
 
