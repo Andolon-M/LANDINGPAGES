@@ -11,3 +11,50 @@ body{
     width: 100vw;
     height: 100vh;
 }
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+    height: 85%;
+    background-image: url('../storage/img/unsplash_1XLyzi17Z2M.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.fotos_footer{
+    position: absolute;
+    width: 90%;
+    height: 20%;
+    bottom: 1.8em;
+    left: 5%;
+    right: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.foto-footer{
+    
+    width: 100%;
+}
+
+.foto-footer img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.nombre_foto{
+    position: absolute;
+    color: var(--color-primary);
+    bottom: 5px;
+    margin-left: 7%;
+    margin-right: auto;
+    text-shadow: 0 0 2px black;
+
+}
