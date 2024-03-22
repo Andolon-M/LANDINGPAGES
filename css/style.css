@@ -58,3 +58,33 @@ main{
     text-shadow: 0 0 2px black;
 
 }
+.container_header{
+    margin-left: 2em;
+    height: 73%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+   }
+   .titulo{
+       color: var(--color-primary);
+       font-size: 3em;
+       width: 40%;
+       height: fit-content;
+   
+   }
+   .descipcion{
+       color: var(--color-primary);
+       font-size: 1em;
+       width: 40%;
+       height: fit-content;
+   }
+   .boton{
+       background: var(--color-primary);
+       padding: 1em 2em;
+       border-radius: 10px;
+       text-decoration: none;
+       color: black;
+       font-weight: 600;
+   }
+   
